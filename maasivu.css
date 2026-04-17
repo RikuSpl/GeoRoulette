@@ -1,1 +1,344 @@
+/* =============================================================
+   GeoRoulette — Country Page Stylesheet  (maasivu.css)
+   Used by: Islanti.html  and future country pages
+   ============================================================= */
+
+
+/* ── Fonts ─────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;600;700&display=swap');
+
+
+/* ── Global Variables ───────────────────────────────────────── */
+/* Edit these to change the overall look of every page at once  */
+
+:root {
+	--page-bg:   #f2f2f0;   /* background outside the page card  */
+	--text-main: #1f1f1e;   /* default body text                 */
+	--muted:     #5c5c57;   /* secondary / paragraph text        */
+	--line:      #d1d1cc;   /* divider lines                     */
+	--card-bg:   #eeeeea;   /* page card background              */
+}
+
+
+/* ── Reset ──────────────────────────────────────────────────── */
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* ── Base Body ──────────────────────────────────────────────── */
+
+body {
+	margin: 0;
+	background: var(--page-bg);
+	color: var(--text-main);
+	font-family: 'Manrope', sans-serif;
+	line-height: 1.5;
+}
+
+
+/* =============================================================
+   SHARED LAYOUT
+   Shared across all country pages
+   ============================================================= */
+
+/* Centre and constrain the header, main card, and footer */
+.site-header,
+main,
+.site-footer {
+	width: min(980px, calc(100% - 2rem));
+	margin-inline: auto;
+}
+
+
+/* ── Header ─────────────────────────────────────────────────── */
+
+.site-header {
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	align-items: center;
+	gap: 1.2rem;
+	padding: 1rem 0 0.5rem;
+}
+
+/* GeoRoulette logo text */
+.brand {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 1.9rem;
+	font-weight: 700;
+}
+
+/* Explore / About links */
+.main-nav {
+	display: flex;
+	gap: 1.2rem;
+}
+
+.main-nav a {
+	color: var(--text-main);
+	text-decoration: none;
+	font-size: 0.92rem;
+	font-weight: 600;
+	opacity: 0.9;
+}
+
+.main-nav a:hover {
+	text-decoration: underline;
+}
+
+/* "Back to roulette" button */
+.back-btn {
+	border: 1px solid #9b9b94;
+	background: transparent;
+	color: var(--text-main);
+	font: inherit;
+	font-size: 0.8rem;
+	padding: 0.3rem 0.7rem;
+	cursor: pointer;
+}
+
+
+/* ── Main Page Card ─────────────────────────────────────────── */
+
+main {
+	background: var(--card-bg);
+	border: 1px solid #cbc9c2;
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ── Hero (country title + topic buttons) ───────────────────── */
+
+.hero {
+	text-align: center;
+	padding: 2.2rem 1rem 1.4rem;
+}
+
+.hero h1 {
+	margin: 0;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: clamp(2.8rem, 8vw, 5.6rem);
+	line-height: 0.9;
+	letter-spacing: 0.01em;
+	/* Country-specific colour set below in COUNTRY SECTIONS */
+}
+
+/* Row of topic filter buttons below the title */
+.topic-tabs {
+	display: inline-flex;
+	gap: 0.55rem;
+	margin-top: 1.05rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.topic-tabs button {
+	border: 1px solid #9b9b94;
+	background: #ecece8;
+	color: var(--text-main);
+	font: inherit;
+	font-size: 0.77rem;
+	padding: 0.32rem 0.6rem;
+}
+
+
+/* ── Content Rows (text + image side-by-side) ───────────────── */
+/* Each section of the page uses this two-column layout          */
+
+.content-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2.1rem;
+	align-items: center;
+	padding: 2.4rem 2rem;
+}
+
+/* Generic light and dark fallback colours (if no country class) */
+.content-row.light {
+	background: #efefec;
+}
+
+.content-row.dark {
+	background: #354a2f;
+	color: #ecf0e8;
+}
+
+/* Section headings inside content rows */
+.content-row h2 {
+	margin: 0 0 0.3rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.content-row h3 {
+	margin: 0 0 0.9rem;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.content-row p {
+	margin: 0 0 0.7rem;
+	max-width: 45ch;
+	font-size: 0.92rem;
+	color: var(--muted);
+}
+
+/* Images inside content rows */
+.visual img {
+	width: 100%;
+	display: block;
+	border: 1px solid rgba(0, 0, 0, 0.14);
+	object-fit: cover;
+}
+
+/* Two stacked images in one cell (used in Locations section) */
+.stacked-images {
+	display: grid;
+	gap: 0.8rem;
+}
+
+.stacked-images img {
+	aspect-ratio: 16 / 9;
+}
+
+
+/* ── Footer ─────────────────────────────────────────────────── */
+
+.site-footer {
+	border: 1px solid #cbc9c2;
+	border-top: none;
+	background: #e6e6e2;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.5rem;
+	padding: 1.1rem 1rem;
+	font-size: 0.8rem;
+	color: #ecece5;
+	text-align: center;
+}
+
+.site-footer div {
+	padding-top: 0.25rem;
+	border-top: 1px solid var(--line);
+}
+
+
+/* =============================================================
+   COUNTRY 1 — Iceland  (Islanti.html)
+   Section colours based on the Icelandic flag: blue, red, white
+   aihe1 = Sagas (white)  aihe2 = Locations (red)
+   aihe3 = Literature (blue)  aihe4 = Basic info (blue)
+   ============================================================= */
+
+/* Hero title colour */
+.hero h1 {
+	color: #0456a8;
+}
+
+/* Section 1 — white */
+.content-row.aihe1 {
+	background: #f9fbff;
+	color: #1a2a3c;
+}
+.content-row.aihe1 p { color: #3c4b5d; }
+
+/* Section 2 — red */
+.content-row.aihe2 {
+	background: #c81f3d;
+	color: #fff5f7;
+}
+.content-row.aihe2 p { color: #ffe4ea; }
+
+/* Section 3 — mid blue */
+.content-row.aihe3 {
+	background: #2e6eb6;
+	color: #f5f9ff;
+}
+.content-row.aihe3 p { color: #dfebff; }
+
+/* Section 4 — deep blue */
+.content-row.aihe4 {
+	background: #0456a8;
+	color: #f2f7ff;
+}
+.content-row.aihe4 p { color: #dce9ff; }
+
+
+/* =============================================================
+   COUNTRY 2 — (name here)  (filename.html)
+   Add section colours below following the same pattern as above
+   ============================================================= */
+
+/* .hero h1 { color: ; } */
+
+/* .content-row.aihe1 { background: ; color: ; } */
+/* .content-row.aihe1 p { color: ; } */
+
+/* .content-row.aihe2 { background: ; color: ; } */
+/* .content-row.aihe2 p { color: ; } */
+
+/* .content-row.aihe3 { background: ; color: ; } */
+/* .content-row.aihe3 p { color: ; } */
+
+/* .content-row.aihe4 { background: ; color: ; } */
+/* .content-row.aihe4 p { color: ; } */
+
+
+/* =============================================================
+   COUNTRY 3 — (name here)  (filename.html)
+   ============================================================= */
+
+/* .hero h1 { color: ; } */
+/* .content-row.aihe1 ... */
+
+
+/* =============================================================
+   COUNTRY 4 — (name here)  (filename.html)
+   ============================================================= */
+
+/* .hero h1 { color: ; } */
+/* .content-row.aihe1 ... */
+
+
+/* =============================================================
+   COUNTRY 5 — (name here)  (filename.html)
+   ============================================================= */
+
+/* .hero h1 { color: ; } */
+/* .content-row.aihe1 ... */
+
+
+/* =============================================================
+   RESPONSIVE — small screens (≤ 760 px)
+   ============================================================= */
+
+@media (max-width: 760px) {
+
+	/* Stack header items vertically */
+	.site-header {
+		grid-template-columns: 1fr;
+		gap: 0.5rem;
+	}
+
+	.main-nav {
+		gap: 0.9rem;
+	}
+
+	/* Stack content rows vertically */
+	.content-row {
+		grid-template-columns: 1fr;
+		padding: 1.6rem 1.1rem;
+	}
+
+	.content-row h3 {
+		font-size: 1.6rem;
+	}
+
+	.site-footer {
+		grid-template-columns: 1fr 1fr;
+	}
+}
 
