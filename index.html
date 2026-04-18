@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoRoulette</title>
+</head>
+<body>
+    <header>
+        <!--NAV alkaa-->
+        <nav>
+            <!--Vasen puoli navista (logo)-->
+            <div class="left">
+                <a href="index.html">GeoRoulette</a>
+            </div>
+            <!--Oikea puoli navista-->
+            <div class="right">
+                <a href="index.html">Roulette</a>
+                <a href="About.html">About</a>
+            </div>
+        </nav>
+        <!--NAV loppuu-->
+    </header>
+
+    <main>
+        <div id="map">
+            <script>
+                fetch("./Assets/SVG-map/world.svg")
+                .then(res => res.text())
+                .then(svg => {
+                document.getElementById("map").innerHTML = svg;
+                });
+            </script>
+        </div>
+
+        <div class="roulette-button">
+            <button>Roulette</button>
+        </div>
+    </main>
+
+
+    <footer>
+
+        
+    </footer>
+</body>
+</html>
