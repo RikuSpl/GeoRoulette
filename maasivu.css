@@ -239,13 +239,22 @@ main {
 	gap: 0.5rem;
 	padding: 1.1rem 1rem;
 	font-size: 0.8rem;
-	color: #ecece5;
+	color: #2f2f2b;
 	text-align: center;
 }
 
 .site-footer div {
 	padding-top: 0.25rem;
-	border-top: 1px solid var(--line);
+	border-top: 1px solid #b7b7b0;
+}
+
+.site-footer a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
 }
 
 
@@ -283,24 +292,36 @@ main {
 
 
 /* =============================================================
-   COUNTRY 2 — (name here)  (filename.html)
-   Add section colours below following the same pattern as above
-   MUISTA VAIHTAA OIKEA CLASS!!!!
+   COUNTRY 2 — Morocco  (Marokko.html)
    ============================================================= */
 
-/* .hero h1 { color: ; } */
+.marokko-page .hero h1 {
+	color: #9f1d22;
+}
 
-/* .content-row.aihe1 { background: ; color: ; } */
-/* .content-row.aihe1 p { color: ; } */
+.content-row.m-aihe1 {
+	background: #f7efe2;
+	color: #3c2a1d;
+}
+.content-row.m-aihe1 p { color: #5a4432; }
 
-/* .content-row.aihe2 { background: ; color: ; } */
-/* .content-row.aihe2 p { color: ; } */
+.content-row.m-aihe2 {
+	background: #1f5a3a;
+	color: #f2f8f2;
+}
+.content-row.m-aihe2 p { color: #d9ebdf; }
 
-/* .content-row.aihe3 { background: ; color: ; } */
-/* .content-row.aihe3 p { color: ; } */
+.content-row.m-aihe3 {
+	background: #d6a34f;
+	color: #2b1d10;
+}
+.content-row.m-aihe3 p { color: #4a3219; }
 
-/* .content-row.aihe4 { background: ; color: ; } */
-/* .content-row.aihe4 p { color: ; } */
+.content-row.m-aihe4 {
+	background: #9f1d22;
+	color: #fff4f4;
+}
+.content-row.m-aihe4 p { color: #ffdede; }
 
 
 /* =============================================================
