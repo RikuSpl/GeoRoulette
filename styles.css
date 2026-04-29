@@ -78,6 +78,10 @@ nav a {
     border-radius: 15px;
 }
 
+.roulette-button a {
+    color: var(--background-color);
+}
+
 .roulette-button:hover {
     background-color: #25361a;
 }
