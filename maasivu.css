@@ -46,6 +46,8 @@ a {
 	text-decoration: none;
 }
 
+/*  Nav Alkaa  */
+
 nav {
     display: flex;
     align-items: center;
@@ -77,6 +79,8 @@ nav a {
     font-family: "Quicksand";
     font-weight: 500;
 }
+
+/*  Nav Loppuu  */
 
 .right a:hover {
     border-bottom: solid 1px;
@@ -150,7 +154,7 @@ main {
 .content-row {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-	gap: 2.1rem;
+	gap: 8.5rem;
 	align-items: stretch;
 	min-height: clamp(320px, 38vw, 520px);
 	padding: 2.4rem 2rem;
@@ -168,6 +172,18 @@ main {
 	justify-content: center;
 	gap: 0.15rem;
 	padding-block: 0.35rem;
+	max-width: 54ch;
+}
+
+/* Keep text readable while pulling content closer to the center split */
+.content-row > .copy:first-child {
+	margin-left: auto;
+	margin-right: clamp(0.5rem, 1.2vw, 1rem);
+}
+
+.content-row > .copy:last-child {
+	margin-left: clamp(0.5rem, 1.2vw, 1rem);
+	margin-right: auto;
 }
 
 .visual {
@@ -176,8 +192,16 @@ main {
 	justify-content: center;
 }
 
+.content-row > .visual:first-child {
+	justify-content: flex-end;
+}
+
+.content-row > .visual:last-child {
+	justify-content: flex-start;
+}
+
 .visual:not(.stacked-images) {
-	min-height: clamp(260px, 30vw, 420px);
+	min-height: clamp(250px, 29vw, 400px);
 }
 
 /* Backup värit*/
@@ -206,15 +230,16 @@ main {
 
 .content-row p {
 	margin: 0 0 0.7rem;
-	max-width: 45ch;
-	font-size: 0.92rem;
+	max-width: 50ch;
+	font-size: 0.98rem;
 	color: var(--muted);
 }
 
 /* Kuvat */
 .visual img {
-	width: 100%;
-	height: 100%;
+	width: min(93%, 620px);
+	height: auto;
+	max-height: clamp(250px, 29vw, 400px);
 	display: block;
 	border: 1px solid rgba(0, 0, 0, 0.14);
 	object-fit: cover;
@@ -223,13 +248,18 @@ main {
 /* Pinotut kuvat */
 .stacked-images {
 	display: grid;
-	gap: 0.8rem;
+	gap: 1rem;
 	align-content: center;
+	justify-items: center;
+	max-width: min(100%, 800px);
+	margin-inline: auto;
 }
 
 .stacked-images img {
+	width: 100%;
 	aspect-ratio: 16 / 9;
 	height: auto;
+	max-height: clamp(185px, 19vw, 290px);
 }
 
 
@@ -330,30 +360,225 @@ main {
 
 
 /* =============================================================
-   COUNTRY 3 — (name here)  (filename.html)
-   MUISTA VAIHTAA OIKEA CLASS!!!!
+   COUNTRY 3 — Brazil  (brazil.html)
    ============================================================= */
 
-/* .hero h1 { color: ; } */
-/* .content-row.aihe1 ... */
+.brazil-page .hero h1 {
+	color: #009c3b;
+}
+
+/* Facts — dark forest green */
+.content-row.br-aihe4 {
+	background: #005e26;
+	color: #f0fff5;
+}
+.content-row.br-aihe4 p { color: #d8f5e2; }
+
+/* Locations — deep Amazon green */
+.content-row.br-aihe2 {
+	background: #1a5e30;
+	color: #edfaf2;
+}
+.content-row.br-aihe2 p { color: #c8ecd6; }
+
+/* Cultural heritage — warm light green */
+.content-row.br-aihe1 {
+	background: #eef7e6;
+	color: #1a2e10;
+}
+.content-row.br-aihe1 p { color: #3a5525; }
+
+/* Carnival & Music — Brazilian gold */
+.content-row.br-aihe3 {
+	background: #c8960c;
+	color: #1a1200;
+}
+.content-row.br-aihe3 p { color: #4a3800; }
 
 
 /* =============================================================
-   COUNTRY 4 — (name here)  (filename.html)^
-   MUISTA VAIHTAA OIKEA CLASS!!!!
+   COUNTRY 4 — Cambodia  (cambodia.html)
    ============================================================= */
 
-/* .hero h1 { color: ; } */
-/* .content-row.aihe1 ... */
+.cambodia-page .hero h1 {
+	color: #8b2215;
+}
+
+/* Facts — deep terracotta red */
+.content-row.cam-aihe4 {
+	background: #8b2215;
+	color: #fff5f2;
+}
+.content-row.cam-aihe4 p { color: #ffd8cc; }
+
+/* Locations — dark orange-red */
+.content-row.cam-aihe2 {
+	background: #6b2c14;
+	color: #faf3ec;
+}
+.content-row.cam-aihe2 p { color: #e8cbb5; }
+
+/* Angkor Wat — forest green */
+.content-row.cam-aihe3 {
+	background: #2a5c3f;
+	color: #f0f8f2;
+}
+.content-row.cam-aihe3 p { color: #d5eadc; }
+
+/* Cultural heritage — warm tan */
+.content-row.cam-aihe1 {
+	background: #f5ede0;
+	color: #3c1f0f;
+}
+.content-row.cam-aihe1 p { color: #5a3820; }
 
 
 /* =============================================================
-   COUNTRY 5 — (name here)  (filename.html)
-   MUISTA VAIHTAA OIKEA CLASS!!!!
+   COUNTRY 5 — Canada  (Canada.html)
    ============================================================= */
 
-/* .hero h1 { color: ; } */
-/* .content-row.aihe1 ... */
+.canada-page .hero h1 {
+	color: #cc0000;
+}
+
+/* Facts — Canadian red */
+.content-row.can-aihe4 {
+	background: #cc0000;
+	color: #fff5f5;
+}
+.content-row.can-aihe4 p { color: #ffd8d8; }
+
+/* Locations — dark red */
+.content-row.can-aihe2 {
+	background: #8c1c1c;
+	color: #fff8f8;
+}
+.content-row.can-aihe2 p { color: #ffd8d8; }
+
+/* Cultural heritage — soft warm white */
+.content-row.can-aihe1 {
+	background: #fef6f6;
+	color: #2a0808;
+}
+.content-row.can-aihe1 p { color: #4a1515; }
+
+/* Language & Society — deep blue (French Canada) */
+.content-row.can-aihe3 {
+	background: #1a3568;
+	color: #f5f8ff;
+}
+.content-row.can-aihe3 p { color: #d0dcf5; }
+
+
+/* =============================================================
+   COUNTRY 6 — Germany  (Germany.html)
+   ============================================================= */
+
+.germany-page .hero h1 {
+	color: #1a1a18;
+}
+
+/* Facts — near black */
+.content-row.ger-aihe4 {
+	background: #1a1a18;
+	color: #f5f5f0;
+}
+.content-row.ger-aihe4 p { color: #d5d5cc; }
+
+/* Locations — dark charcoal */
+.content-row.ger-aihe2 {
+	background: #2e2e2a;
+	color: #f5f5f0;
+}
+.content-row.ger-aihe2 p { color: #d0d0c8; }
+
+/* Cultural heritage — German gold */
+.content-row.ger-aihe3 {
+	background: #c8870a;
+	color: #1a1000;
+}
+.content-row.ger-aihe3 p { color: #4a3500; }
+
+/* History — German red */
+.content-row.ger-aihe1 {
+	background: #f5f5f3;
+	color: #1a1a18;
+}
+.content-row.ger-aihe1 p { color: #4a4a44; }
+
+
+/* =============================================================
+   COUNTRY 7 — China  (kiina.html)
+   ============================================================= */
+
+.china-page .hero h1 {
+	color: #c0001d;
+}
+
+/* Facts — deep Chinese red */
+.content-row.cn-aihe4 {
+	background: #c0001d;
+	color: #fff5f6;
+}
+.content-row.cn-aihe4 p { color: #ffd8dc; }
+
+/* Locations — dark crimson */
+.content-row.cn-aihe2 {
+	background: #800015;
+	color: #fff5f6;
+}
+.content-row.cn-aihe2 p { color: #ffc8ce; }
+
+/* Cultural heritage — warm ivory */
+.content-row.cn-aihe1 {
+	background: #fdf5e8;
+	color: #2a1500;
+}
+.content-row.cn-aihe1 p { color: #5a3810; }
+
+/* History — Chinese gold */
+.content-row.cn-aihe3 {
+	background: #c8820a;
+	color: #1a0e00;
+}
+.content-row.cn-aihe3 p { color: #4a3000; }
+
+
+/* =============================================================
+   COUNTRY 8 — Japan  (Japan.html)
+   ============================================================= */
+
+.japan-page .hero h1 {
+	color: #bc002d;
+}
+
+/* Facts — deep Japanese red */
+.content-row.jp-aihe4 {
+	background: #bc002d;
+	color: #fff5f7;
+}
+.content-row.jp-aihe4 p { color: #ffd8e0; }
+
+/* Locations — dark red */
+.content-row.jp-aihe2 {
+	background: #8a0020;
+	color: #fff5f7;
+}
+.content-row.jp-aihe2 p { color: #ffd0dc; }
+
+/* Cultural heritage — warm cream */
+.content-row.jp-aihe3 {
+	background: #f0e8d8;
+	color: #2a1808;
+}
+.content-row.jp-aihe3 p { color: #4a3015; }
+
+/* Traditions — soft off-white */
+.content-row.jp-aihe1 {
+	background: #fff5f7;
+	color: #2a000e;
+}
+.content-row.jp-aihe1 p { color: #4a1020; }
 
 
 /* Responsiivisuus — pienet näytöt (≤ 760 px)  */
@@ -379,6 +604,28 @@ main {
 
 	.content-row h3 {
 		font-size: 1.6rem;
+	}
+
+	.copy {
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.visual img,
+	.stacked-images img {
+		width: 100%;
+		height: auto;
+		max-height: none;
+	}
+
+	.stacked-images {
+		max-width: none;
+	}
+
+	.content-row > .visual:first-child,
+	.content-row > .visual:last-child {
+		justify-content: center;
 	}
 
 	.site-footer {

@@ -2,90 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GeoRoulette - Australia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoRoulette - China</title>
+    <link rel="stylesheet" href="maasivu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-
-    <!-- Header / Navigation -->
-    <header>
-        <div>
-            <strong>GeoRoulette</strong>
-        </div>
+<body class="china-page">
+    <header class="site-header">
         <nav>
-            <a href="#">Explore</a>
-            <a href="#">About</a>
+            <div class="left">
+                <a href="index.html">GeoRoulette</a>
+            </div>
+            <div class="right">
+                <a href="index.html">Roulette</a>
+                <a href="Info.html">About</a>
+            </div>
         </nav>
-        <div>
-            <button>Back to roulette</button>
-        </div>
+        <a class="back-btn" href="index.html">Back to roulette</a>
     </header>
 
     <main>
-
-        <!-- Title Section -->
-        <section>
-            <h1>China (Zhongguo)</h1>
-            <div>
-                <button>Cultural heritage</button>
-                <button>Locations</button>
-                <button>Cuisine</button>
+        <section class="hero">
+            <h1>China</h1>
+            <div class="topic-tabs">
+                <a href="#facts">Facts</a>
+                <a href="#locations">Locations</a>
+                <a href="#cultural-heritage">Cultural heritage</a>
+                <a href="#history">History</a>
             </div>
         </section>
 
-        <!-- Cultural Heritage Section 1 -->
-        <section>
-            <div>
-                <h2>Cultural heritage</h2>
-                <h3>The Dreamtime and the Living Memory</h3>
+        <section id="facts" class="cn-aihe4 content-row dark">
+            <div class="copy">
+                <h2>Basic information</h2>
+                <h3>Quick Facts</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur animi delectus.
+                    China is the world's most populous country and the third largest by area, spanning
+                    diverse climates from tropical south to frozen north. Beijing is the capital;
+                    Shanghai is the largest city.
+                </p>
+                <p>
+                    One of the world's oldest continuous civilisations, China has over 5,000 years of
+                    recorded history and is today one of the leading global economic powers.
                 </p>
             </div>
-            <div>
-                <img src="Kuvat/watercolor-chinese-style.avif" alt="">
+            <div class="visual">
+                <img src="/Assets/Kuvat/watercolor-chinese-style.avif" alt="Chinese watercolor art">
             </div>
         </section>
 
-        <!-- Locations Section -->
-        <section>
-            <div>
-                <img src="Kuvat/Greatwall.webp" alt="">
-                <img src="Kuvat/Temple.jpg" alt="">
+        <section id="locations" class="cn-aihe2 content-row dark">
+            <div class="visual stacked-images">
+                <img src="/Assets/Kuvat/Greatwall.webp" alt="The Great Wall of China">
+                <img src="/Assets/Kuvat/Temple.jpg" alt="Chinese temple">
             </div>
-            <div>
+            <div class="copy">
                 <h2>Landscapes & Locations</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, illum.
+                    China's geography is extraordinarily varied — from the Tibetan Plateau and the Himalayas
+                    in the west to the fertile plains and river deltas of the east coast.
                 </p>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, explicabo.
+                    The Yangtze and Yellow Rivers, karst mountains of Guilin, the Gobi Desert, and coastal
+                    megacities like Shanghai and Hong Kong make China one of the most diverse destinations
+                    in the world.
                 </p>
             </div>
         </section>
 
-        <!-- Cultural Heritage Section 2 -->
-        <section>
-            <div>
+        <section id="cultural-heritage" class="cn-aihe1 content-row light">
+            <div class="copy">
                 <h2>Cultural heritage</h2>
-                <h3>The Dreamtime and the Living Memory</h3>
+                <h3>Five Thousand Years of Civilisation</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, adipisci.
+                    Chinese culture encompasses philosophy, poetry, painting, calligraphy, opera, and
+                    martial arts traditions developed over millennia. Confucianism, Taoism, and Buddhism
+                    have all shaped Chinese thought and daily life.
+                </p>
+                <p>
+                    Festivals such as Chinese New Year, the Mid-Autumn Festival, and the Dragon Boat
+                    Festival remain central to cultural life both in China and among Chinese communities
+                    worldwide.
                 </p>
             </div>
-            <div>
-                <img src="Kuvat/terracotta-army.jpg" alt="">
+            <div class="visual">
+                <img src="/Assets/Kuvat/watercolor-chinese-style.avif" alt="Traditional Chinese art">
             </div>
         </section>
 
+        <section id="history" class="cn-aihe3 content-row light">
+            <div class="copy">
+                <h2>History</h2>
+                <h3>Dynasties and the Modern Era</h3>
+                <p>
+                    From the Qin unification in 221 BC to the Tang and Ming dynasties, China's imperial
+                    history is one of the richest in the world. The Terracotta Army, the Great Wall, and
+                    the Forbidden City are enduring symbols of this era.
+                </p>
+                <p>
+                    The founding of the People's Republic in 1949 marked a new chapter, and China's rapid
+                    modernisation over the past four decades has transformed both the country and the
+                    global economy.
+                </p>
+            </div>
+            <div class="visual">
+                <img src="/Assets/Kuvat/terracotta-army.jpg" alt="Terracotta Army, Xi'an">
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div>Footer info</div>
-        <div>Footer info</div>
-        <div>Footer info</div>
-        <div>Copyright</div>
+    <footer class="site-footer">
+        <div><a href="#facts">China facts</a></div>
+        <div><a href="#locations">Locations</a></div>
+        <div><a href="#cultural-heritage">Culture</a></div>
+        <div><a href="Info.html">Copyright</a></div>
     </footer>
-
 </body>
 </html>
