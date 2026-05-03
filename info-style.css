@@ -53,59 +53,10 @@ nav a {
     font-weight: 500;
 }
 
-.right a:first-child {
+.right a:last-child {
     border-bottom: solid 1px;
 }
 
 .right a:hover {
     border-bottom: solid 1px;
-}
-
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-left: 20px;
-}
-
-.roulette-button {
-    color: var(--background-color);
-    background-color: var(--primary-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 15px;
-}
-
-.roulette-button a {
-    color: var(--background-color);
-}
-
-.roulette-button:hover {
-    background-color: #25361a;
-}
-
-.roulette-button a {
-    font-size: 1.6rem;
-    font-family: "Quicksand";
-    font-weight: 600;
-}
-
-.roulette-button:hover {
-    cursor: pointer;
-}
-
-.map-container {
-    display: flex;
-    justify-content: center;
-}
-
-svg {
-    width: 90%;
-    height: auto;
-}
-
-path:hover {
-    fill: var(--tertiary-color);
 }
