@@ -105,3 +105,11 @@ svg {
 path:hover {
     fill: var(--tertiary-color);
 }
+
+path.active {
+    fill: orange;
+}
+
+path.final {
+    fill: red;
+}
