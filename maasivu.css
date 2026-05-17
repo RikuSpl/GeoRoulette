@@ -29,6 +29,9 @@ body {
 	line-height: 1.5;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 
 /* Jaettu layot, koskee kaikkia maasivuja*/
 
