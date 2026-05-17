@@ -2,7 +2,7 @@
 const countryPages = {
     IS: "Islanti.html",
     MA: "Marokko.html",
-    JP: "japani.html",
+    JP: "Japan.html",
     China: "kiina.html",
     FI: "suomi.html",
     Australia: "Australia.html"
