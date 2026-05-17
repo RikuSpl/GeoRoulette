@@ -116,4 +116,12 @@ path.active {
 
 path.final {
     fill: red;
+
+    transform: scale(6);
+
+    transform-box: fill-box;
+
+    transform-origin: center;
+
+    transition: transform 0.5s ease;
 }
