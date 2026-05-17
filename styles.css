@@ -111,7 +111,7 @@ path:hover {
 }
 
 path.active {
-    fill: orange;
+    fill: var(--tertiary-color);
 }
 
 path.final {
