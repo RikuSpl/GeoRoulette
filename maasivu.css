@@ -107,7 +107,7 @@ nav a {
 }
 
 .back-btn:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 
@@ -141,6 +141,7 @@ main {
 	margin-top: 5rem;
 	flex-wrap: wrap;
 	justify-content: center;
+	text-decoration: none;
 }
 
 .topic-tabs a {
@@ -157,7 +158,9 @@ main {
 }
 
 .topic-tabs a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	background: black;
+	color: white;
 }
 
 
@@ -280,7 +283,7 @@ main {
 .site-footer {
 	border: 1px solid #cbc9c2;
 	border-top: none;
-	background: #e6e6e2;
+	background: #ffffff;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 0.5rem;
