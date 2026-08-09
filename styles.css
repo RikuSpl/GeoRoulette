@@ -117,7 +117,7 @@ path.active {
 path.final {
     fill: red;
 
-    transform: scale(6);
+    transform: scale(2);
 
     transform-box: fill-box;
 
