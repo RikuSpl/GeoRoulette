@@ -4,8 +4,10 @@ const countryPages = {
     MA: "Marokko.html",
     JP: "Japan.html",
     China: "kiina.html",
-    FI: "suomi.html",
-    Australia: "Australia.html"
+    CN: "Canada.html",
+    Gr: "Germany.html",
+    CB: "cambodia.html",
+    BR: "Brazil.html",
 }
 
 //adds click listener to button
