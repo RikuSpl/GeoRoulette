@@ -7,7 +7,7 @@ const countryPages = {
     CN: "Canada.html",
     Gr: "Germany.html",
     CB: "cambodia.html",
-    BR: "Brazil.html",
+    BR: "brazil.html",
 }
 
 //adds click listener to button
