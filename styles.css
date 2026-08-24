@@ -106,12 +106,9 @@ svg {
     height: auto;
 }
 
-path:hover {
-    fill: var(--tertiary-color);
-}
 
 path.active {
-    fill: orange;
+    fill: var(--tertiary-color);
 }
 
 path.final {
