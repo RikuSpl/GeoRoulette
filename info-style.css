@@ -60,3 +60,19 @@ nav a {
 .right a:hover {
     border-bottom: solid 1px;
 }
+
+/*About us laatikko*/
+
+.aboutus {
+  display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: min(90%, 800px);
+    margin: 80px auto;
+    padding: 2.5rem;
+    background-color: #3E4E35;
+    color: black;
+    border: 1px solid var(--secondary-color);
+    border-radius: 25px;
+    text-align: center;
+}
