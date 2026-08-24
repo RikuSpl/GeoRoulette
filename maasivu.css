@@ -7,11 +7,11 @@
 /* Root */
 
 :root {
-	--page-bg:   #f2f2f0;   /* background outside the page card  */
+	--page-bg:   #ffffff;   /* background outside the page card  */
 	--text-main: #1f1f1e;   /* default body text                 */
 	--muted:     #5c5c57;   /* secondary / paragraph text        */
 	--line:      #d1d1cc;   /* divider lines                     */
-	--card-bg:   #eeeeea;   /* page card background              */
+	--card-bg:   #ffffff;   /* page card background              */
 }
 
 * {
@@ -26,9 +26,12 @@ body {
 	background: var(--page-bg);
 	color: var(--text-main);
 	font-family: 'Manrope', sans-serif;
-	line-height: 1.5;
+	line-height: 1.0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 
 /* Jaettu layot, koskee kaikkia maasivuja*/
 
@@ -88,15 +91,23 @@ nav a {
 
 /* "Back to roulette" Nappi */
 .back-btn {
-	border: 1px solid #9b9b94;
-	background: transparent;
+	border-radius: 20px;
 	color: var(--text-main);
 	font: inherit;
-	font-size: 0.8rem;
-	padding: 0.3rem 0.7rem;
+	font-weight: 500;
+	font-size: 1rem;
+	padding: 0.32rem 0.6rem;
 	cursor: pointer;
 	text-decoration: none;
 	display: inline-block;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 100;
+}
+
+.back-btn:hover {
+	text-decoration: none;
 }
 
 
@@ -127,25 +138,29 @@ main {
 .topic-tabs {
 	display: inline-flex;
 	gap: 0.55rem;
-	margin-top: 1.05rem;
+	margin-top: 5rem;
 	flex-wrap: wrap;
 	justify-content: center;
+	text-decoration: none;
 }
 
 .topic-tabs a {
-	border: 1px solid #9b9b94;
-	background: #ecece8;
+	border: 2px solid #000000ad;
+	border-radius: 20px;
+	background: #ffffff;
 	color: var(--text-main);
 	font-family: inherit;
-	font-weight: 400;
-	font-size: 0.77rem;
+	font-weight: 500;
+	font-size: 1rem;
 	padding: 0.32rem 0.6rem;
 	text-decoration: none;
 	display: inline-block;
 }
 
 .topic-tabs a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	background: black;
+	color: white;
 }
 
 
@@ -231,7 +246,7 @@ main {
 .content-row p {
 	margin: 0 0 0.7rem;
 	max-width: 50ch;
-	font-size: 0.98rem;
+	font-size: 1.2rem;
 	color: var(--muted);
 }
 
@@ -268,7 +283,7 @@ main {
 .site-footer {
 	border: 1px solid #cbc9c2;
 	border-top: none;
-	background: #e6e6e2;
+	background: #ffffff;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 0.5rem;
